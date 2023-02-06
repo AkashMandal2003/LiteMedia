@@ -12,8 +12,29 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
-
+import { useState } from "react";
 const LeftBar = () => {
+ 
+    const content={
+        myclass:"hide"
+    };
+    const [data,setdata]=useState(content);
+    const toggle=()=>{
+        var temp="";
+        if(data.myclass=="hide")
+        {
+           temp={
+            myclass:"show",
+           }
+        }
+        else{
+            temp={
+                myclass:"hide"
+            }
+        };
+        setdata(temp);
+    }
+
     return (
         <div className="leftBar">
             <div className="container">
@@ -33,9 +54,18 @@ const LeftBar = () => {
                         <img src={Groups} alt="" />
                         <span>Groups</span>
                     </div>
-                    <div className="item">
+                    <div className="item" >
                         <img src={Market} alt="" />
-                        <span>Marketplace</span>
+                        <span onClick={toggle} >Marketplace</span>
+                       
+                    </div>
+                    <div id="market" className={data.myclass}>
+                       <ul>
+                        <li><a href="https://www.amazon.in/" target="_blank">Amazon</a></li>
+                        <li><a href="https://www.flipkart.com/" target="_blank">Flipkart</a></li>
+                        <li><a href="https://www.myntra.com/" target="_blank">Myntra</a></li>
+                        
+                       </ul>
                     </div>
                     <div className="item">
                         <img src={Watch} alt="" />
