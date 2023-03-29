@@ -11,6 +11,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from "../../components/posts/Posts"
 
 const Profile = () => {
+    
     return (
         <div className="profile">
             <div className="images">
@@ -45,7 +46,7 @@ const Profile = () => {
                         </a> */}
                     </div>
                     <div className="center">
-                        <span>Paul Walker</span>
+                        <span>Paul Gathod</span>
                         <div className="info">
                             <div className="item">
                                 <PlaceIcon />

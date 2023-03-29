@@ -38,7 +38,7 @@
                     font-size: 20px;
                     letter-spacing: 1px;
                 }
-
+                
                 .user {
                     display: flex;
                     align-items: center;
@@ -56,13 +56,13 @@
 
                     }
                 }
-
+                
                 .item {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     //    flex-direction: column;
-
+                   
                     img {
                         width: 30px;
                     }
@@ -71,10 +71,21 @@
                         font-size: 14px;
                         cursor: pointer;
                     }
+                    a{
+                        color: themed("textcolor");
+                    }
 
 
                 }
-
+                // .item a #spa{
+                //     color:black;
+                // }
+                // #item1{
+                //     a{
+                //         color:black;
+                //         color: themed("textcolor");
+                //     }
+                // }
                 #market {
                     //  border:1px solid red;
                     width: 200px;
@@ -88,6 +99,7 @@
                         text-align: center;
                         list-style: none;
                         padding: 10px 25px;
+                        color: black;
 
                         li {
                             border-bottom: 2px solid white;
@@ -104,6 +116,12 @@
                         li a:hover {
                             color: blue;
                         }
+                    }
+                    p{
+                        font-size: 10px;
+                        color: black;
+                        text-align: justify;
+                        padding: 7px 7px 7px 7px;
                     }
 
                 }

@@ -8,10 +8,11 @@ import Events from "../../assets/6.png";
 import Gaming from "../../assets/7.png";
 import Gallery from "../../assets/8.png";
 import Videos from "../../assets/9.png";
-import Messages from "../../assets/10.png";
+// import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
+import C from "../../assets/c.png";
 import { useState } from "react";
 const LeftBar = () => {
  
@@ -35,6 +36,88 @@ const LeftBar = () => {
         setdata(temp);
     }
 
+
+    const contentG={
+        myclass1:"hide"
+    };
+    const [dataG,setdataG]=useState(contentG);
+    const toggleG=()=>{
+        var temp="";
+        if(dataG.myclass1=="hide")
+        {
+           temp={
+            myclass1:"show",
+           }
+        }
+        else{
+            temp={
+                myclass1:"hide"
+            }
+        };
+        setdataG(temp);
+    }
+
+    const contentW={
+        myclass2:"hide"
+    };
+    const [dataW,setdataW]=useState(contentW);
+    const toggleW=()=>{
+        var temp="";
+        if(dataW.myclass2=="hide")
+        {
+           temp={
+            myclass2:"show",
+           }
+        }
+        else{
+            temp={
+                myclass2:"hide"
+            }
+        };
+        setdataW(temp);
+    }
+
+    const contentUs={
+        myclass2:"hide"
+    };
+    const [dataUs,setdataUs]=useState(contentUs);
+    const toggleUs=()=>{
+        var temp="";
+        if(dataUs.myclass2=="hide")
+        {
+           temp={
+            myclass2:"show",
+           }
+        }
+        else{
+            temp={
+                myclass2:"hide"
+            }
+        };
+        setdataUs(temp);
+    }
+
+    const contentCon={
+        myclass2:"hide"
+    };
+    const [dataCon,setdataCon]=useState(contentCon);
+    const toggleCon=()=>{
+        var temp="";
+        if(dataCon.myclass2=="hide")
+        {
+           temp={
+            myclass2:"show",
+           }
+        }
+        else{
+            temp={
+                myclass2:"hide"
+            }
+        };
+        setdataCon(temp);
+    }
+
+
     return (
         <div className="leftBar">
             <div className="container">
@@ -51,10 +134,6 @@ const LeftBar = () => {
                         <span>Friends</span>
                     </div>
                     <div className="item">
-                        <img src={Groups} alt="" />
-                        <span>Groups</span>
-                    </div>
-                    <div className="item" >
                         <img src={Market} alt="" />
                         <span onClick={toggle} >Marketplace</span>
                        
@@ -79,26 +158,45 @@ const LeftBar = () => {
                 <hr />
                 <div className="menu">
                     <span><b>Your Shortcuts</b></span>
-                    <div className="item">
+                    <div className="item" id="item1">
                         <img src={Events} alt="" />
-                        <span>Events</span>
+                        <a href="https://www.google.com/calendar" target="_blank" style={{textDecoration: 'none', color:'inherit'}} >
+                        <p id="spa">Events</p>
+                        </a>
                     </div>
                     <div className="item">
                         <img src={Gaming} alt="" />
-                        <span>Gaming</span>
+                        <span onClick={toggleG}>Gaming</span>
+                    </div>
+                    <div id="market" className={dataG.myclass1}>
+                       <ul>
+                        {/* <li><a href="https://www.similarweb.com/website/twitch.tv/" target="_blank">Twitch TV</a></li> */}
+                        <li><a href="https://www.similarweb.com/website/chess.com/" target="_blank">Chess</a></li>
+                        <li><a href="https://www.similarweb.com/website/fortnite.com/" target="_blank">Fortnite</a></li>
+                        <li><a href="https://www.similarweb.com/website/xbox.com/" target="_blank">XBox</a></li>
+                       </ul>
                     </div>
                     <div className="item">
                         <img src={Gallery} alt="" />
-                        <span>Gallery</span>
+                        <span onClick={toggleW}>Wallpapers</span>
                     </div>
+                    <div id="market" className={dataW.myclass2}>
+                       <ul>
+                        {/* <li><a href="https://www.similarweb.com/website/twitch.tv/" target="_blank">Twitch TV</a></li> */}
+                        <li><a href="https://unsplash.com/" target="_blank">Unplash</a></li>
+                        <li><a href="https://in.pinterest.com/" target="_blank">Pinterest</a></li>
+                        <li><a href="https://www.pexels.com/" target="_blank">Pixels</a></li>
+                       </ul>
+                    </div>
+
                     <div className="item">
                         <img src={Videos} alt="" />
                         <span>Videos</span>
                     </div>
-                    <div className="item">
+                    {/* <div className="item">
                         <img src={Messages} alt="" />
                         <span>Messages</span>
-                    </div>
+                    </div> */}
                 </div>
                 <hr />
                 <div className="menu">
@@ -116,21 +214,27 @@ const LeftBar = () => {
                         <span>Courses</span>
                     </div>
                     <div className="item">
-                        <img src={Courses} alt="" />
-                        <span>Courses</span>
+                        <img src={Groups} alt="" />
+                        <span onClick={toggleUs}>About Us</span>
+                    </div>
+                    <div id="market" className={dataUs.myclass2}>
+                       <p>
+We're very sincere students with a straightforward vision. We believe that there is an amazing amount to be learned by working in a "real-world" web production environment, alongside other like-minded teens. <br />
+We've had an amazing journey coming to where we are today.
+</p>
                     </div>
                     <div className="item">
-                        <img src={Courses} alt="" />
-                        <span>Courses</span>
+                        <img src={C} alt="" />
+                        <span onClick={toggleCon}>Contact Us</span>
                     </div>
-                    <div className="item">
-                        <img src={Courses} alt="" />
-                        <span>Courses</span>
+                    <div id="market" className={dataCon.myclass2}>
+                        <ul>
+                            <li>feedback@gamil.com</li>
+                            <li>litemedia.org.in</li>
+                            <li>Mob:9577440078</li>
+                        </ul>
                     </div>
-                    <div className="item">
-                        <img src={Courses} alt="" />
-                        <span>Courses</span>
-                    </div>
+                
                 </div>
             </div>
         </div>

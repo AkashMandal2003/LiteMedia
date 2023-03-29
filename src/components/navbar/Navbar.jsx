@@ -13,6 +13,16 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { AuthContext } from "../../context/authContext";
 
 const Navbar = () => {
+  // const posts = [
+  //   {
+  //     id: 1,
+  //     name: "Paul Walker",
+  //     userId: 1,
+  //     profilePic:
+  //       "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  //     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  //     img: "https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  //   }];
   const { toggle, darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
 
