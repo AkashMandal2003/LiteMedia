@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/LiteMedia/static/css/main.d0a35418.css",
+    "main.js": "/LiteMedia/static/js/main.dc8caf0e.js",
+    "static/media/c.png": "/LiteMedia/static/media/c.67219df50cd82dc7a6ac.png",
+    "index.html": "/LiteMedia/index.html",
+    "main.d0a35418.css.map": "/LiteMedia/static/css/main.d0a35418.css.map",
+    "main.dc8caf0e.js.map": "/LiteMedia/static/js/main.dc8caf0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0a35418.css",
+    "static/js/main.dc8caf0e.js"
+  ]
+}
