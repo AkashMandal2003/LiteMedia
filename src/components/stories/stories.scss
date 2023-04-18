@@ -6,23 +6,30 @@
   height: 250px;
   margin-bottom: 30px;
   
-
+  border-radius:11px solid red;;
   @include mobile {
     height: 50px;
     margin-bottom: 0;
     justify-content: space-between;
   }
-
+  
   @include tablet{
     height: 150px;
     gap: 20px;
   }
-
+  #videobox{
+    height:250px;
+    width: 100%;
+    position: relative;
+    border-radius: 1px solid red;
+    display: none;
+  }
   .story {
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    // display: none;
     
 
     @include mobile {
@@ -37,6 +44,8 @@
       height: 100%;
       object-fit: cover;
     }
+
+
     span {
       position: absolute;
       bottom: 10px;

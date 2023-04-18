@@ -117,6 +117,64 @@ const LeftBar = () => {
         setdataCon(temp);
     }
 
+    const contentCou={
+        myclass2:"hide"
+    };
+    const [dataCou,setdataCou]=useState(contentCou);
+    const toggleCou=()=>{
+        var temp="";
+        if(dataCou.myclass2=="hide")
+        {
+           temp={
+            myclass2:"show",
+           }
+        }
+        else{
+            temp={
+                myclass2:"hide"
+            }
+        };
+        setdataCou(temp);
+    }
+    const contentt={
+        myclass2:"hide"
+    };
+    const [datat,setdatat]=useState(contentt);
+    const togglet=()=>{
+        var temp="";
+        if(datat.myclass2=="hide")
+        {
+           temp={
+            myclass2:"show",
+           }
+        }
+        else{
+            temp={
+                myclass2:"hide"
+            }
+        };
+        setdatat(temp);
+    }
+    const contentk={
+        myclass2:"hide"
+    };
+    const [datak,setdatak]=useState(contentk);
+    const togglek=()=>{
+        var temp="";
+        if(datak.myclass2=="hide")
+        {
+           temp={
+            myclass2:"show",
+           }
+        }
+        else{
+            temp={
+                myclass2:"hide"
+            }
+        };
+        setdatak(temp);
+    }
+
 
     return (
         <div className="leftBar">
@@ -203,16 +261,39 @@ const LeftBar = () => {
                     <span><b>Others</b></span>
                     <div className="item">
                         <img src={Fund} alt="" />
-                        <span>Fundraiser</span>
+                        <span onClick={togglek}>Kids Space</span>
                     </div>
+                    <div id="market" className={datak.myclass2}>
+                        <ul>
+                            <li><a href="https://www.youtube.com/kids/">Youtube Kids</a></li>
+                            <li><a href="https://pbskids.org/games">PBS kids Game</a></li>
+                            <li><a href="https://www.funbrain.com/">FunBrain</a></li>
+                        </ul>
+                    </div>
+
                     <div className="item">
                         <img src={Tutorials} alt="" />
-                        <span>Tutorials</span>
+                        <span onClick={togglet}>Tutorials</span>
+                    </div>
+                    <div id="market" className={datat.myclass2}>
+                        <ul>
+                            <li><a href="https://www.geeksforgeeks.org/">GFG</a></li>
+                            <li><a href="https://www.tutorialspoint.com/index.htm">TutorialPoint</a></li>
+                            <li><a href="https://www.javatpoint.com/">JavatPoint</a></li>
+                        </ul>
                     </div>
                     <div className="item">
                         <img src={Courses} alt="" />
-                        <span>Courses</span>
+                        <span onClick={toggleCou}>Courses</span>
                     </div>
+                    <div id="market" className={dataCou.myclass2}>
+                        <ul>
+                            <li><a href="https://infyspringboard.onwingspan.com/web/en/login">Infosys</a></li>
+                            <li><a href="https://www.coursera.org/">Coursera</a></li>
+                            <li><a href="https://www.freecodecamp.org/">freeCodecamp</a></li>
+                        </ul>
+                    </div>
+
                     <div className="item">
                         <img src={Groups} alt="" />
                         <span onClick={toggleUs}>About Us</span>
@@ -229,7 +310,7 @@ We've had an amazing journey coming to where we are today.
                     </div>
                     <div id="market" className={dataCon.myclass2}>
                         <ul>
-                            <li>feedback@gamil.com</li>
+                            <li><a href="mailto:feedbackLiteMedia@gmail.com">LM@gmail.com</a></li>
                             <li>litemedia.org.in</li>
                             <li>Mob:9577440078</li>
                         </ul>

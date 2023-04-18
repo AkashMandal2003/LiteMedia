@@ -3,7 +3,7 @@ import Register from "./pages/register/Register";
 import {
   createBrowserRouter,
   RouterProvider,
-  // Route,
+  Route,
   Outlet,
   Navigate,
 } from "react-router-dom";
@@ -16,6 +16,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import "./style.scss";
 import { AuthContext } from "./context/authContext";
+
 
 
 function App() {
