@@ -29,10 +29,10 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="left">
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none"}}>
           <span>LiteMedia</span>
         </Link>
-        <Link to="/" className="ak" style={{ textDecoration: "none" }}>
+        <Link to="/" className="ak" style={{ textDecoration: "none"}}>
           <span><HomeOutlinedIcon /></span>
         </Link>
         {darkMode ? (
@@ -48,7 +48,7 @@ const Navbar = () => {
       </div>
       <div className="right">
         <PersonOutlinedIcon />
-        <EmailOutlinedIcon />
+        <a href="mailto:feedbackLiteMedia@gmail.com" style={{position:"relative",top:"3px",textDecoration:"none",color:"inherit"}}><EmailOutlinedIcon /></a>
         <NotificationsOutlinedIcon />
         <div className="user">
           <img
