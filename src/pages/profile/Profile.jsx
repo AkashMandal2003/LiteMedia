@@ -10,6 +10,12 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from "../../components/posts/Posts"
 
+const follow1 = (a) => {
+    alert("You have followed Akash Mandal");
+    a.target.innerHTML = "followed";
+    a.target.style["background-color"] = "lightgreen";
+}
+
 const Profile = () => {
     
     return (
@@ -29,16 +35,16 @@ const Profile = () => {
             <div className="profileContainer">
                 <div className="uInfo">
                     <div className="left">
-                        <a href="http://facebook.com">
+                        <a href="http://facebook.com" target="_blank">
                             <FacebookTwoToneIcon fontSize="large" />
                         </a>
-                        <a href="http://facebook.com">
+                        <a href="https://www.instagram.com/" target="_blank">
                             <InstagramIcon fontSize="large" />
                         </a>
                         {/* <a href="http://facebook.com">
                             <TwitterIcon fontSize="large" />
                         </a> */}
-                        <a href="http://facebook.com">
+                        <a href="https://in.linkedin.com/" target="_blank">
                             <LinkedInIcon fontSize="large" />
                         </a>
                         {/* <a href="http://facebook.com">
@@ -57,10 +63,10 @@ const Profile = () => {
                                 <span>paul.walker</span>
                             </div>
                         </div>
-                        <button>follow</button>
+                        <button onClick={follow1}>follow</button>
                     </div>
                     <div className="right">
-                        <EmailOutlinedIcon />
+                        <a href="mailto:paulGathod@gmail.com" style={{position:"relative",top:"3px",textDecoration:"none",color:"inherit"}}><EmailOutlinedIcon /></a>
                         <MoreVertIcon />
                     </div>
                 </div>
